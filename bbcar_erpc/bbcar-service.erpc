@@ -1,0 +1,14 @@
+
+program bbcar_control; // specify name of output files
+
+interface BBCarService // cover functions for same topic
+{
+    stop(in uint8 cars) -> void //car is an index to a BBCar object
+    goStraight(in uint8 cars, in int32 speed) -> void
+    turn(in uint8 cars, in int32 speed, in double factor) -> void
+    ctl_mode() -> void
+    RemoteControlAction(in uint8 mode, in int32 value, double factor) -> void
+    RemoteTuneSpeed(in double max, in double min) -> void
+    RemoteShowSpeed() -> void
+    RemoteShowPattern() -> void
+}

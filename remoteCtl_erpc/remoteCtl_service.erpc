@@ -1,0 +1,9 @@
+program remote_control; // specify name of output files
+
+interface ControlService // cover functions for same topic
+{
+    RemoteControlAction(in uint8 mode, in int32 value, double factor) -> void
+    RemoteTuneSpeed(in double max, in double min) -> void
+    RemoteShowSpeed() -> void
+    RemoteShowPattern() -> void
+}
